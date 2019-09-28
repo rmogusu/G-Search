@@ -7,6 +7,7 @@ import { UserDataComponent } from './user-data/user-data.component';
 import { UserRepoListComponent } from './user-repo-list/user-repo-list.component';
 import { DateCountPipe } from './date-count.pipe';
 import { BackgroundColorDirective } from './background-color.directive';
+import { SearchUserComponent } from './search-user/search-user.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BackgroundColorDirective } from './background-color.directive';
     UserDataComponent,
     UserRepoListComponent,
     DateCountPipe,
-    BackgroundColorDirective
+    BackgroundColorDirective,
+    SearchUserComponent
   ],
   imports: [
     BrowserModule,
