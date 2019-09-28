@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {GitUser} from '../git-user';
+
 
 @Component({
   selector: 'app-user-data',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-data.component.css']
 })
 export class UserDataComponent implements OnInit {
+   user: GitUser[];
+
 
   constructor() { }
 
