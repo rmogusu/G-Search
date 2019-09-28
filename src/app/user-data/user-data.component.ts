@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GitUser} from '../git-user';
+import {MyServiceService} from '../my-service.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class UserDataComponent implements OnInit {
    user: GitUser[];
 
 
-  constructor() { }
+  constructor(private service: MyServiceService) { }
 
   ngOnInit() {
   }

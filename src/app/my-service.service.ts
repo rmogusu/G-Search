@@ -5,6 +5,8 @@ import {GitUser} from './git-user';
   providedIn: 'root'
 })
 export class MyServiceService {
+  user: GitUser[] = [];
+
 
   constructor() { }
 }
