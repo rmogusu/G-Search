@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {RepoModel} from './repo-model';
 import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,5 +9,12 @@ import {HttpClient} from '@angular/common/http';
 export class RepoServiceService {
   myRepo: RepoModel[]=[];
 
-  constructor(public  http: HttpClient) { }
+  _URL = 'https://api.github.com/users/';
+  token = '?access_token=3cbbddb991c02e7d5a2f0fd4224f9267a5153e5f';
+  constructor(public  http: HttpClient) {
+  }
+
+  getRepo(searchTerm: string): Observable<any> {
+    return this.http.get(this._URL + searchTerm + '/repositories?' + this.token);
+  }
 }
