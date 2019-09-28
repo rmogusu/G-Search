@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {RepoModel} from './repo-model';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,5 +8,5 @@ import {RepoModel} from './repo-model';
 export class RepoServiceService {
   myRepo: RepoModel[]=[];
 
-  constructor() { }
+  constructor(public  http: HttpClient) { }
 }

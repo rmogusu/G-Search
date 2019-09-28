@@ -11,7 +11,7 @@
             <div class="card-body">
               <p id="des">{{repo.description}}</p>
               <p id="lang">{{repo.language}}</p>
-              <p id="date">{{u.created_at|date|uppercase}}</p>
+              <p id="date">{{repo.created_at|date|uppercase}}</p>
               <p>Created at {{repo.created_at|dateCount}} days ago</p>
             </div>
             <div class="card-footer ">

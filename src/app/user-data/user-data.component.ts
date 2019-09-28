@@ -11,7 +11,11 @@ import {MyServiceService} from '../my-service.service';
 export class UserDataComponent implements OnInit {
    user: GitUser[];
 
-
+  //  addNewSearchTerm(quote){
+  //   let quoteLength = this.u.length
+  //   u.created_at = new Date(u.created_at)
+  //   this.u.push(searchTerm)
+  // }
   constructor(private service: MyServiceService) { }
 
   ngOnInit() {

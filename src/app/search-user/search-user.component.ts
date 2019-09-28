@@ -10,7 +10,7 @@ export class SearchUserComponent implements OnInit {
   @Output() searchEmitter = new EventEmitter<any>();
 
   constructor() { }
-
+  
 emitUser() {
   this.searchEmitter.emit(this.searchTerm);
   this.searchTerm= new SearchTerm ('');
