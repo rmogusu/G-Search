@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RepoModel} from '../repo-model';
+import {RepoServiceService} from '../repo-service.service';
 
 @Component({
   selector: 'app-user-repo-list',
@@ -10,7 +11,7 @@ export class UserRepoListComponent implements OnInit {
   myRepo: RepoModel[];
 
 
-  constructor() { }
+  constructor(public reposerv: RepoServiceService) { }
 
   ngOnInit() {
   }
