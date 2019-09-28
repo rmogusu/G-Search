@@ -1,7 +1,10 @@
 
 <div class="col">
         <div class="input-group mb-3">
-          <input type="text" class="form-control bg-transparent col-sm-6 offset-3" placeholder="Search here" id ="search" aria-label="user" aria-describedby="basic-addon2" name="searchTerm" [(ngModel)]="searchTerm">
+          <input type="text" class="form-control bg-transparent col-sm-6 offset-3" placeholder="Search here" id ="search" aria-label="user" aria-describedby="basic-addon2" name="searchTerm" [(ngModel)]="searchTerm" #searchTerm="ngModel" required >
+          <div [hidden]="searchTerm.valid || searchTerm.pristine" class="alert alert-danger">
+                <p>UserName  is required</p>
+           </div>
           <div class="input-group-append">
             <button class="btn btn-outline-success" type="button" (click)="emmitUser()">Search</button>
           </div>
