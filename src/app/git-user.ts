@@ -7,7 +7,6 @@ export class GitUser {
     location: any;
     followers: any;
     following: any;
-    created_at: Date;
-    public_repos: any;
+    public_repositories: any;
 
 }

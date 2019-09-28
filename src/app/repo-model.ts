@@ -5,6 +5,8 @@ export class RepoModel {
     watchers: any;
     forks: any;
     default_branch: any;
+    created_at: Date;
     language: any;
+
 
 }
