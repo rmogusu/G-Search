@@ -10,6 +10,7 @@ import { BackgroundColorDirective } from './background-color.directive';
 import { SearchUserComponent } from './search-user/search-user.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     UserRepoListComponent,
     DateCountPipe,
     BackgroundColorDirective,
-    SearchUserComponent
+    SearchUserComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
