@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RepoModel} from '../repo-model';
 
 @Component({
   selector: 'app-user-repo-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-repo-list.component.css']
 })
 export class UserRepoListComponent implements OnInit {
+  myRepo: RepoModel[];
+
 
   constructor() { }
 
