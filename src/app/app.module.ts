@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { UserRepoListComponent } from './user-repo-list/user-repo-list.component';
 import { DateCountPipe } from './date-count.pipe';
+import { BackgroundColorDirective } from './background-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDataComponent,
     UserRepoListComponent,
-    DateCountPipe
+    DateCountPipe,
+    BackgroundColorDirective
   ],
   imports: [
     BrowserModule,
