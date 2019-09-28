@@ -8,6 +8,9 @@ import { UserRepoListComponent } from './user-repo-list/user-repo-list.component
 import { DateCountPipe } from './date-count.pipe';
 import { BackgroundColorDirective } from './background-color.directive';
 import { SearchUserComponent } from './search-user/search-user.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { SearchUserComponent } from './search-user/search-user.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,7 @@ export class SearchUserComponent implements OnInit {
 
 emmitUser() {
   this.searchEmmiter.emit(this.searchTerm);
+  this.searchTerm= new SearchTerm ('');
   }
   ngOnInit() {
   }
