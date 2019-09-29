@@ -11,6 +11,7 @@ import { SearchUserComponent } from './search-user/search-user.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NavComponent } from './nav/nav.component';
     DateCountPipe,
     BackgroundColorDirective,
     SearchUserComponent,
-    NavComponent
+    NavComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
