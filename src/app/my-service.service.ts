@@ -1,6 +1,9 @@
-import { Injectable } from '@angular/core';
-import {GitUser} from './git-user';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../environments/environment';
+import {GitUser} from './git-user';
+import {SearchUserComponent} from './search-user/search-user.component';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +13,9 @@ export class MyServiceService {
   _URL = 'https://api.github.com/users/';
   token = "?access_token=e8d69983bba3ae132ca4cf6f36bba724aefac099";
 
+  constructor(private http: HttpClient) {
+  }
 
-  constructor(private http: HttpClient) { }
-  
   searchMyUser(searchTerm: string) {
 
     interface data {
@@ -20,13 +23,9 @@ export class MyServiceService {
       avatar_url: string;
       following: string;
       followers: string;
-      public_repositories: string;
-      name:string;
-      bio:string;
-      location:string;
-      company:string;
-
+      public_repos: string;
     }
+
     return new Promise((resolve, reject) => {
       this.user = [];
 
@@ -41,5 +40,6 @@ export class MyServiceService {
         }
       );
     });
+  }
 }
-}
+

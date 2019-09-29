@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {GitUser} from '../git-user';
+import {Component, OnInit} from '@angular/core';
 import {MyServiceService} from '../my-service.service';
-
+import {GitUser} from '../git-user';
 
 @Component({
   selector: 'app-user-data',
@@ -9,16 +8,28 @@ import {MyServiceService} from '../my-service.service';
   styleUrls: ['./user-data.component.css']
 })
 export class UserDataComponent implements OnInit {
-   user: GitUser[];
+  user: GitUser[];
+  particlesJS: any;
 
-  //  addNewSearchTerm(quote){
-  //   let quoteLength = this.u.length
-  //   u.created_at = new Date(u.created_at)
-  //   this.u.push(searchTerm)
-  // }
-  constructor(private service: MyServiceService) { }
+  constructor(private service: MyServiceService) {
+  }
+
+  getSearchedUser(searchTerm) {
+    this.service.searchMyUser(searchTerm).then(
+      (success) => {
+        this.user = this.service.user;
+        console.log(this.user);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 
   ngOnInit() {
+    this.getSearchedUser('rmogusu');
+    let particlesJS;
+    particlesJS.load('particles-js', 'particles.json', null);
   }
 
 }
